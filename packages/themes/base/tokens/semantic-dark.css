@@ -1,0 +1,139 @@
+/**
+ * Ignited UI - Semantic Tokens (Dark Theme)
+ *
+ * Dark mode color mappings following Material Design 3 principles.
+ */
+
+[data-theme='dark'] {
+  /* ===== Primary Color System ===== */
+  --ig-color-primary: var(--ig-palette-primary-80);
+  --ig-color-on-primary: var(--ig-palette-primary-20);
+  --ig-color-primary-container: var(--ig-palette-primary-30);
+  --ig-color-on-primary-container: var(--ig-palette-primary-90);
+  --ig-color-primary-hover: var(--ig-palette-primary-70);
+  --ig-color-primary-active: var(--ig-palette-primary-60);
+
+  /* ===== Secondary Color System ===== */
+  --ig-color-secondary: var(--ig-palette-secondary-80);
+  --ig-color-on-secondary: var(--ig-palette-secondary-20);
+  --ig-color-secondary-container: var(--ig-palette-secondary-30);
+  --ig-color-on-secondary-container: var(--ig-palette-secondary-90);
+  --ig-color-secondary-hover: var(--ig-palette-secondary-70);
+  --ig-color-secondary-active: var(--ig-palette-secondary-60);
+
+  /* ===== Tertiary Color System ===== */
+  --ig-color-tertiary: var(--ig-palette-tertiary-80);
+  --ig-color-on-tertiary: var(--ig-palette-tertiary-20);
+  --ig-color-tertiary-container: var(--ig-palette-tertiary-30);
+  --ig-color-on-tertiary-container: var(--ig-palette-tertiary-90);
+  --ig-color-tertiary-hover: var(--ig-palette-tertiary-70);
+  --ig-color-tertiary-active: var(--ig-palette-tertiary-60);
+
+  /* ===== Surface & Background ===== */
+  --ig-color-surface: var(--ig-palette-neutral-10);
+  --ig-color-on-surface: var(--ig-palette-neutral-90);
+  --ig-color-surface-variant: var(--ig-palette-neutral-variant-30);
+  --ig-color-on-surface-variant: var(--ig-palette-neutral-variant-80);
+  --ig-color-surface-dim: var(--ig-palette-neutral-6);
+  --ig-color-surface-bright: var(--ig-palette-neutral-24);
+  --ig-color-surface-container-lowest: var(--ig-palette-neutral-4);
+  --ig-color-surface-container-low: var(--ig-palette-neutral-10);
+  --ig-color-surface-container: var(--ig-palette-neutral-12);
+  --ig-color-surface-container-high: var(--ig-palette-neutral-17);
+  --ig-color-surface-container-highest: var(--ig-palette-neutral-22);
+
+  --ig-color-background: var(--ig-palette-neutral-10);
+  --ig-color-on-background: var(--ig-palette-neutral-90);
+
+  /* ===== Error System ===== */
+  --ig-color-error: var(--ig-palette-error-80);
+  --ig-color-on-error: var(--ig-palette-error-20);
+  --ig-color-error-container: var(--ig-palette-error-30);
+  --ig-color-on-error-container: var(--ig-palette-error-90);
+  --ig-color-error-hover: var(--ig-palette-error-70);
+  --ig-color-error-active: var(--ig-palette-error-60);
+
+  /* ===== Success System ===== */
+  --ig-color-success: var(--ig-palette-success-80);
+  --ig-color-on-success: var(--ig-palette-success-20);
+  --ig-color-success-container: var(--ig-palette-success-30);
+  --ig-color-on-success-container: var(--ig-palette-success-90);
+  --ig-color-success-hover: var(--ig-palette-success-70);
+  --ig-color-success-active: var(--ig-palette-success-60);
+
+  /* ===== Warning System ===== */
+  --ig-color-warning: var(--ig-palette-warning-80);
+  --ig-color-on-warning: var(--ig-palette-warning-20);
+  --ig-color-warning-container: var(--ig-palette-warning-30);
+  --ig-color-on-warning-container: var(--ig-palette-warning-90);
+  --ig-color-warning-hover: var(--ig-palette-warning-70);
+  --ig-color-warning-active: var(--ig-palette-warning-60);
+
+  /* ===== Info System ===== */
+  --ig-color-info: var(--ig-palette-info-80);
+  --ig-color-on-info: var(--ig-palette-info-20);
+  --ig-color-info-container: var(--ig-palette-info-30);
+  --ig-color-on-info-container: var(--ig-palette-info-90);
+  --ig-color-info-hover: var(--ig-palette-info-70);
+  --ig-color-info-active: var(--ig-palette-info-60);
+
+  /* ===== Outline & Border ===== */
+  --ig-color-outline: var(--ig-palette-neutral-variant-60);
+  --ig-color-outline-variant: var(--ig-palette-neutral-variant-30);
+
+  /* ===== Inverse Colors ===== */
+  --ig-color-inverse-surface: var(--ig-palette-neutral-90);
+  --ig-color-inverse-on-surface: var(--ig-palette-neutral-20);
+  --ig-color-inverse-primary: var(--ig-palette-primary-40);
+
+  /* ===== Scrim & Shadow ===== */
+  --ig-color-scrim: var(--ig-palette-neutral-0);
+  --ig-color-shadow: var(--ig-palette-neutral-0);
+
+  /* ===== State Layers (same as light) ===== */
+  --ig-state-hover-opacity: 0.08;
+  --ig-state-focus-opacity: 0.12;
+  --ig-state-pressed-opacity: 0.12;
+  --ig-state-dragged-opacity: 0.16;
+  --ig-state-disabled-opacity: 0.38;
+  --ig-state-disabled-container-opacity: 0.12;
+
+  /* ===== Text Colors ===== */
+  --ig-text-primary: var(--ig-color-on-surface);
+  --ig-text-secondary: var(--ig-palette-neutral-variant-80);
+  --ig-text-tertiary: var(--ig-palette-neutral-60);
+  --ig-text-disabled: rgba(255, 255, 255, 0.38);
+  --ig-text-on-primary: var(--ig-color-on-primary);
+  --ig-text-on-secondary: var(--ig-color-on-secondary);
+  --ig-text-on-error: var(--ig-color-on-error);
+
+  /* ===== Icon Colors ===== */
+  --ig-icon-primary: var(--ig-color-on-surface);
+  --ig-icon-secondary: var(--ig-palette-neutral-variant-80);
+  --ig-icon-tertiary: var(--ig-palette-neutral-60);
+  --ig-icon-disabled: rgba(255, 255, 255, 0.38);
+  --ig-icon-on-primary: var(--ig-color-on-primary);
+  --ig-icon-on-secondary: var(--ig-color-on-secondary);
+
+  /* ===== Divider Colors ===== */
+  --ig-divider: var(--ig-color-outline-variant);
+  --ig-divider-strong: var(--ig-color-outline);
+
+  /* ===== Focus Ring ===== */
+  --ig-focus-ring-color: var(--ig-color-primary);
+}
+
+/* Additional dark theme palette values needed for containers */
+:root {
+  --ig-palette-neutral-4: #0f0e11;
+  --ig-palette-neutral-6: #141316;
+  --ig-palette-neutral-12: #1f1e21;
+  --ig-palette-neutral-17: #2a2929;
+  --ig-palette-neutral-22: #353436;
+  --ig-palette-neutral-24: #3a3939;
+  --ig-palette-neutral-87: #dbd9dd;
+  --ig-palette-neutral-92: #e9e7eb;
+  --ig-palette-neutral-94: #eeecf0;
+  --ig-palette-neutral-96: #f3f1f5;
+  --ig-palette-neutral-98: #f9f7fb;
+}

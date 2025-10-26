@@ -1,0 +1,293 @@
+/**
+ * Ignited UI - Material Design 3 Theme
+ *
+ * This theme maps Material Design 3 specifications to Ignited UI's
+ * design-agnostic token system. Users can swap this out for other
+ * themes (Bootstrap, Fluent, custom, etc.) by overriding the tokens.
+ *
+ * Material Design 3 Resources:
+ * - https://m3.material.io/
+ * - https://m3.material.io/foundations/design-tokens/overview
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  /* ===== Material Design Typography ===== */
+  --ig-font-family-base: 'Roboto', system-ui, -apple-system, sans-serif;
+  --ig-font-family-display: var(--ig-font-family-base);
+
+  /* Material Design Type Scale */
+  --ig-font-size-display-large: 3.5625rem;     /* 57px */
+  --ig-font-size-display-medium: 2.8125rem;    /* 45px */
+  --ig-font-size-display-small: 2.25rem;       /* 36px */
+
+  --ig-font-size-headline-large: 2rem;         /* 32px */
+  --ig-font-size-headline-medium: 1.75rem;     /* 28px */
+  --ig-font-size-headline-small: 1.5rem;       /* 24px */
+
+  --ig-font-size-title-large: 1.375rem;        /* 22px */
+  --ig-font-size-title-medium: 1rem;           /* 16px */
+  --ig-font-size-title-small: 0.875rem;        /* 14px */
+
+  --ig-font-size-body-large: 1rem;             /* 16px */
+  --ig-font-size-body-medium: 0.875rem;        /* 14px */
+  --ig-font-size-body-small: 0.75rem;          /* 12px */
+
+  --ig-font-size-label-large: 0.875rem;        /* 14px */
+  --ig-font-size-label-medium: 0.75rem;        /* 12px */
+  --ig-font-size-label-small: 0.6875rem;       /* 11px */
+
+  /* Material Design Line Heights */
+  --ig-line-height-display: 1.12;
+  --ig-line-height-headline: 1.25;
+  --ig-line-height-title: 1.43;
+  --ig-line-height-body: 1.5;
+  --ig-line-height-label: 1.43;
+
+  /* Material Design Letter Spacing */
+  --ig-letter-spacing-display: -0.0156em;      /* -0.25px */
+  --ig-letter-spacing-headline: 0;
+  --ig-letter-spacing-title: 0.009375em;       /* 0.15px */
+  --ig-letter-spacing-body: 0.03125em;         /* 0.5px */
+  --ig-letter-spacing-label: 0.0625em;         /* 1px */
+
+  /* ===== Material Design Shape System ===== */
+  --ig-radius-none: 0px;
+  --ig-radius-xs: 4px;          /* extra-small */
+  --ig-radius-sm: 8px;          /* small */
+  --ig-radius-md: 12px;         /* medium */
+  --ig-radius-lg: 16px;         /* large */
+  --ig-radius-xl: 28px;         /* extra-large */
+  --ig-radius-full: 9999px;     /* full (circular) */
+
+  /* ===== Material Design Elevation System ===== */
+  /* Material Design uses specific shadow combinations */
+  --ig-shadow-level-0: none;
+  --ig-shadow-level-1:
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --ig-shadow-level-2:
+    0px 1px 2px 0px rgba(0, 0, 0, 0.3),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  --ig-shadow-level-3:
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.3);
+  --ig-shadow-level-4:
+    0px 6px 10px 4px rgba(0, 0, 0, 0.15),
+    0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+  --ig-shadow-level-5:
+    0px 8px 12px 6px rgba(0, 0, 0, 0.15),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+
+  /* Map to generic shadow variables */
+  --ig-shadow-xs: var(--ig-shadow-level-1);
+  --ig-shadow-sm: var(--ig-shadow-level-2);
+  --ig-shadow-md: var(--ig-shadow-level-3);
+  --ig-shadow-lg: var(--ig-shadow-level-4);
+  --ig-shadow-xl: var(--ig-shadow-level-5);
+  --ig-shadow-2xl: var(--ig-shadow-level-5);
+
+  /* ===== Material Design Motion System ===== */
+  /* Material Design easing curves */
+  --ig-transition-easing-standard: cubic-bezier(0.2, 0.0, 0, 1.0);
+  --ig-transition-easing-emphasized: cubic-bezier(0.2, 0.0, 0, 1.0);
+  --ig-transition-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1.0);
+  --ig-transition-easing-emphasized-accelerate: cubic-bezier(0.3, 0.0, 0.8, 0.15);
+
+  /* Override default easing */
+  --ig-transition-easing-ease: var(--ig-transition-easing-standard);
+  --ig-transition-easing-ease-in-out: var(--ig-transition-easing-emphasized);
+  --ig-transition-easing-ease-out: var(--ig-transition-easing-emphasized-decelerate);
+  --ig-transition-easing-ease-in: var(--ig-transition-easing-emphasized-accelerate);
+
+  /* Material Design durations */
+  --ig-transition-duration-short-1: 50ms;
+  --ig-transition-duration-short-2: 100ms;
+  --ig-transition-duration-short-3: 150ms;
+  --ig-transition-duration-short-4: 200ms;
+  --ig-transition-duration-medium-1: 250ms;
+  --ig-transition-duration-medium-2: 300ms;
+  --ig-transition-duration-medium-3: 350ms;
+  --ig-transition-duration-medium-4: 400ms;
+  --ig-transition-duration-long-1: 450ms;
+  --ig-transition-duration-long-2: 500ms;
+  --ig-transition-duration-long-3: 550ms;
+  --ig-transition-duration-long-4: 600ms;
+
+  /* Map to generic duration variables */
+  --ig-transition-duration-fast: var(--ig-transition-duration-short-2);
+  --ig-transition-duration-base: var(--ig-transition-duration-medium-1);
+  --ig-transition-duration-slow: var(--ig-transition-duration-medium-3);
+  --ig-transition-duration-slower: var(--ig-transition-duration-long-2);
+
+  /* ===== Material Design State Layers ===== */
+  /* These control opacity overlays for interactive states */
+  --ig-state-hover-opacity: 0.08;
+  --ig-state-focus-opacity: 0.12;
+  --ig-state-pressed-opacity: 0.12;
+  --ig-state-dragged-opacity: 0.16;
+
+  /* ===== Material Design Spacing ===== */
+  /* Material Design uses an 8px grid system */
+  --ig-spacing-unit: 8px;
+
+  /* ===== Material Design Component-Specific Tokens ===== */
+
+  /* Button Heights */
+  --ig-button-height-sm: 32px;
+  --ig-button-height-md: 40px;
+  --ig-button-height-lg: 48px;
+
+  /* FAB Sizes */
+  --ig-fab-size-sm: 40px;
+  --ig-fab-size-md: 56px;
+  --ig-fab-size-lg: 96px;
+
+  /* Icon Button Size */
+  --ig-icon-button-size: 48px;
+
+  /* Chip Heights */
+  --ig-chip-height: 32px;
+
+  /* App Bar Heights */
+  --ig-app-bar-height-sm: 56px;
+  --ig-app-bar-height-md: 64px;
+
+  /* Navigation Rail Width */
+  --ig-nav-rail-width: 80px;
+
+  /* Navigation Drawer Width */
+  --ig-nav-drawer-width: 360px;
+
+  /* Bottom Navigation Height */
+  --ig-bottom-nav-height: 80px;
+
+  /* Dialog Max Width */
+  --ig-dialog-max-width: 560px;
+
+  /* Snackbar Width */
+  --ig-snackbar-width: 344px;
+}
+
+/* ===== Material Design Typography Classes ===== */
+
+.ig-type-display-large {
+  font-family: var(--ig-font-family-display);
+  font-size: var(--ig-font-size-display-large);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-display);
+  letter-spacing: var(--ig-letter-spacing-display);
+}
+
+.ig-type-display-medium {
+  font-family: var(--ig-font-family-display);
+  font-size: var(--ig-font-size-display-medium);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-display);
+  letter-spacing: var(--ig-letter-spacing-display);
+}
+
+.ig-type-display-small {
+  font-family: var(--ig-font-family-display);
+  font-size: var(--ig-font-size-display-small);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-display);
+  letter-spacing: var(--ig-letter-spacing-display);
+}
+
+.ig-type-headline-large {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-headline-large);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-headline);
+  letter-spacing: var(--ig-letter-spacing-headline);
+}
+
+.ig-type-headline-medium {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-headline-medium);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-headline);
+  letter-spacing: var(--ig-letter-spacing-headline);
+}
+
+.ig-type-headline-small {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-headline-small);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-headline);
+  letter-spacing: var(--ig-letter-spacing-headline);
+}
+
+.ig-type-title-large {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-title-large);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-title);
+  letter-spacing: var(--ig-letter-spacing-title);
+}
+
+.ig-type-title-medium {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-title-medium);
+  font-weight: var(--ig-font-weight-medium);
+  line-height: var(--ig-line-height-title);
+  letter-spacing: var(--ig-letter-spacing-title);
+}
+
+.ig-type-title-small {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-title-small);
+  font-weight: var(--ig-font-weight-medium);
+  line-height: var(--ig-line-height-title);
+  letter-spacing: var(--ig-letter-spacing-title);
+}
+
+.ig-type-body-large {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-body-large);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-body);
+  letter-spacing: var(--ig-letter-spacing-body);
+}
+
+.ig-type-body-medium {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-body-medium);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-body);
+  letter-spacing: var(--ig-letter-spacing-body);
+}
+
+.ig-type-body-small {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-body-small);
+  font-weight: var(--ig-font-weight-normal);
+  line-height: var(--ig-line-height-body);
+  letter-spacing: var(--ig-letter-spacing-body);
+}
+
+.ig-type-label-large {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-label-large);
+  font-weight: var(--ig-font-weight-medium);
+  line-height: var(--ig-line-height-label);
+  letter-spacing: var(--ig-letter-spacing-label);
+}
+
+.ig-type-label-medium {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-label-medium);
+  font-weight: var(--ig-font-weight-medium);
+  line-height: var(--ig-line-height-label);
+  letter-spacing: var(--ig-letter-spacing-label);
+}
+
+.ig-type-label-small {
+  font-family: var(--ig-font-family-base);
+  font-size: var(--ig-font-size-label-small);
+  font-weight: var(--ig-font-weight-medium);
+  line-height: var(--ig-line-height-label);
+  letter-spacing: var(--ig-letter-spacing-label);
+}

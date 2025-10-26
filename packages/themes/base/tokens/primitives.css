@@ -1,0 +1,288 @@
+/**
+ * Ignited UI - Primitive Design Tokens
+ *
+ * These are design-system agnostic primitive values that form the foundation
+ * of any theme. They are not tied to Material Design or any specific design system.
+ */
+
+:root {
+  /* ===== Color Primitives (Tonal Scale 0-100) ===== */
+
+  /* Primary Palette */
+  --ig-palette-primary-0: #000000;
+  --ig-palette-primary-10: #21005d;
+  --ig-palette-primary-20: #381e72;
+  --ig-palette-primary-30: #4f378b;
+  --ig-palette-primary-40: #6750a4;
+  --ig-palette-primary-50: #7f67be;
+  --ig-palette-primary-60: #9a82db;
+  --ig-palette-primary-70: #b69df8;
+  --ig-palette-primary-80: #d0bcff;
+  --ig-palette-primary-90: #eaddff;
+  --ig-palette-primary-95: #f6edff;
+  --ig-palette-primary-99: #fffbfe;
+  --ig-palette-primary-100: #ffffff;
+
+  /* Secondary Palette */
+  --ig-palette-secondary-0: #000000;
+  --ig-palette-secondary-10: #1d192b;
+  --ig-palette-secondary-20: #332d41;
+  --ig-palette-secondary-30: #4a4458;
+  --ig-palette-secondary-40: #625b71;
+  --ig-palette-secondary-50: #7a7289;
+  --ig-palette-secondary-60: #958da5;
+  --ig-palette-secondary-70: #b0a7c0;
+  --ig-palette-secondary-80: #ccc2dc;
+  --ig-palette-secondary-90: #e8def8;
+  --ig-palette-secondary-95: #f6edff;
+  --ig-palette-secondary-99: #fffbfe;
+  --ig-palette-secondary-100: #ffffff;
+
+  /* Tertiary Palette */
+  --ig-palette-tertiary-0: #000000;
+  --ig-palette-tertiary-10: #31111d;
+  --ig-palette-tertiary-20: #492532;
+  --ig-palette-tertiary-30: #633b48;
+  --ig-palette-tertiary-40: #7d5260;
+  --ig-palette-tertiary-50: #986977;
+  --ig-palette-tertiary-60: #b58392;
+  --ig-palette-tertiary-70: #d29dac;
+  --ig-palette-tertiary-80: #efb8c8;
+  --ig-palette-tertiary-90: #ffd8e4;
+  --ig-palette-tertiary-95: #ffecf1;
+  --ig-palette-tertiary-99: #fffbfa;
+  --ig-palette-tertiary-100: #ffffff;
+
+  /* Neutral Palette */
+  --ig-palette-neutral-0: #000000;
+  --ig-palette-neutral-10: #1c1b1f;
+  --ig-palette-neutral-20: #313033;
+  --ig-palette-neutral-30: #484649;
+  --ig-palette-neutral-40: #605d62;
+  --ig-palette-neutral-50: #787579;
+  --ig-palette-neutral-60: #939094;
+  --ig-palette-neutral-70: #aeaaae;
+  --ig-palette-neutral-80: #c9c5ca;
+  --ig-palette-neutral-90: #e6e1e5;
+  --ig-palette-neutral-95: #f4eff4;
+  --ig-palette-neutral-99: #fffbfe;
+  --ig-palette-neutral-100: #ffffff;
+
+  /* Neutral Variant Palette */
+  --ig-palette-neutral-variant-0: #000000;
+  --ig-palette-neutral-variant-10: #1d1a22;
+  --ig-palette-neutral-variant-20: #322f37;
+  --ig-palette-neutral-variant-30: #49454f;
+  --ig-palette-neutral-variant-40: #605d66;
+  --ig-palette-neutral-variant-50: #79747e;
+  --ig-palette-neutral-variant-60: #938f99;
+  --ig-palette-neutral-variant-70: #aea9b4;
+  --ig-palette-neutral-variant-80: #cac4d0;
+  --ig-palette-neutral-variant-90: #e7e0ec;
+  --ig-palette-neutral-variant-95: #f5eefa;
+  --ig-palette-neutral-variant-99: #fffbfe;
+  --ig-palette-neutral-variant-100: #ffffff;
+
+  /* Error Palette */
+  --ig-palette-error-0: #000000;
+  --ig-palette-error-10: #410e0b;
+  --ig-palette-error-20: #601410;
+  --ig-palette-error-30: #8c1d18;
+  --ig-palette-error-40: #b3261e;
+  --ig-palette-error-50: #dc362e;
+  --ig-palette-error-60: #e46962;
+  --ig-palette-error-70: #ec928e;
+  --ig-palette-error-80: #f2b8b5;
+  --ig-palette-error-90: #f9dedc;
+  --ig-palette-error-95: #fceeee;
+  --ig-palette-error-99: #fffbf9;
+  --ig-palette-error-100: #ffffff;
+
+  /* Success Palette */
+  --ig-palette-success-0: #000000;
+  --ig-palette-success-10: #0e2b0d;
+  --ig-palette-success-20: #1d4620;
+  --ig-palette-success-30: #2d6230;
+  --ig-palette-success-40: #3d7e40;
+  --ig-palette-success-50: #4e9a52;
+  --ig-palette-success-60: #68b46c;
+  --ig-palette-success-70: #84ce88;
+  --ig-palette-success-80: #a3e7a6;
+  --ig-palette-success-90: #c4f3c6;
+  --ig-palette-success-95: #e3fae3;
+  --ig-palette-success-99: #f7fff6;
+  --ig-palette-success-100: #ffffff;
+
+  /* Warning Palette */
+  --ig-palette-warning-0: #000000;
+  --ig-palette-warning-10: #3e2d00;
+  --ig-palette-warning-20: #624700;
+  --ig-palette-warning-30: #876200;
+  --ig-palette-warning-40: #ad7e00;
+  --ig-palette-warning-50: #d49b00;
+  --ig-palette-warning-60: #f8b825;
+  --ig-palette-warning-70: #ffc950;
+  --ig-palette-warning-80: #ffda76;
+  --ig-palette-warning-90: #ffeba0;
+  --ig-palette-warning-95: #fff5d0;
+  --ig-palette-warning-99: #fffcf5;
+  --ig-palette-warning-100: #ffffff;
+
+  /* Info Palette */
+  --ig-palette-info-0: #000000;
+  --ig-palette-info-10: #001d36;
+  --ig-palette-info-20: #003355;
+  --ig-palette-info-30: #004a77;
+  --ig-palette-info-40: #00639b;
+  --ig-palette-info-50: #007cc0;
+  --ig-palette-info-60: #4c9dde;
+  --ig-palette-info-70: #6fb8f5;
+  --ig-palette-info-80: #97d0ff;
+  --ig-palette-info-90: #cde5ff;
+  --ig-palette-info-95: #e7f2ff;
+  --ig-palette-info-99: #fafcff;
+  --ig-palette-info-100: #ffffff;
+
+  /* ===== Typography Scale ===== */
+
+  --ig-font-family-base: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ig-font-family-display: var(--ig-font-family-base);
+  --ig-font-family-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Courier New', monospace;
+
+  --ig-font-size-xs: 0.75rem;      /* 12px */
+  --ig-font-size-sm: 0.875rem;     /* 14px */
+  --ig-font-size-base: 1rem;       /* 16px */
+  --ig-font-size-lg: 1.125rem;     /* 18px */
+  --ig-font-size-xl: 1.25rem;      /* 20px */
+  --ig-font-size-2xl: 1.5rem;      /* 24px */
+  --ig-font-size-3xl: 1.875rem;    /* 30px */
+  --ig-font-size-4xl: 2.25rem;     /* 36px */
+  --ig-font-size-5xl: 3rem;        /* 48px */
+  --ig-font-size-6xl: 3.75rem;     /* 60px */
+  --ig-font-size-7xl: 4.5rem;      /* 72px */
+
+  --ig-font-weight-light: 300;
+  --ig-font-weight-normal: 400;
+  --ig-font-weight-medium: 500;
+  --ig-font-weight-semibold: 600;
+  --ig-font-weight-bold: 700;
+  --ig-font-weight-extrabold: 800;
+
+  --ig-line-height-tight: 1.25;
+  --ig-line-height-snug: 1.375;
+  --ig-line-height-normal: 1.5;
+  --ig-line-height-relaxed: 1.625;
+  --ig-line-height-loose: 2;
+
+  --ig-letter-spacing-tighter: -0.05em;
+  --ig-letter-spacing-tight: -0.025em;
+  --ig-letter-spacing-normal: 0;
+  --ig-letter-spacing-wide: 0.025em;
+  --ig-letter-spacing-wider: 0.05em;
+  --ig-letter-spacing-widest: 0.1em;
+
+  /* ===== Spacing Scale (0.25rem base = 4px) ===== */
+
+  --ig-spacing-0: 0;
+  --ig-spacing-px: 1px;
+  --ig-spacing-0-5: 0.125rem;   /* 2px */
+  --ig-spacing-1: 0.25rem;      /* 4px */
+  --ig-spacing-1-5: 0.375rem;   /* 6px */
+  --ig-spacing-2: 0.5rem;       /* 8px */
+  --ig-spacing-2-5: 0.625rem;   /* 10px */
+  --ig-spacing-3: 0.75rem;      /* 12px */
+  --ig-spacing-3-5: 0.875rem;   /* 14px */
+  --ig-spacing-4: 1rem;         /* 16px */
+  --ig-spacing-5: 1.25rem;      /* 20px */
+  --ig-spacing-6: 1.5rem;       /* 24px */
+  --ig-spacing-7: 1.75rem;      /* 28px */
+  --ig-spacing-8: 2rem;         /* 32px */
+  --ig-spacing-9: 2.25rem;      /* 36px */
+  --ig-spacing-10: 2.5rem;      /* 40px */
+  --ig-spacing-11: 2.75rem;     /* 44px */
+  --ig-spacing-12: 3rem;        /* 48px */
+  --ig-spacing-14: 3.5rem;      /* 56px */
+  --ig-spacing-16: 4rem;        /* 64px */
+  --ig-spacing-20: 5rem;        /* 80px */
+  --ig-spacing-24: 6rem;        /* 96px */
+  --ig-spacing-28: 7rem;        /* 112px */
+  --ig-spacing-32: 8rem;        /* 128px */
+  --ig-spacing-36: 9rem;        /* 144px */
+  --ig-spacing-40: 10rem;       /* 160px */
+  --ig-spacing-44: 11rem;       /* 176px */
+  --ig-spacing-48: 12rem;       /* 192px */
+
+  /* ===== Border Radius ===== */
+
+  --ig-radius-none: 0;
+  --ig-radius-xs: 0.125rem;     /* 2px */
+  --ig-radius-sm: 0.25rem;      /* 4px */
+  --ig-radius-md: 0.375rem;     /* 6px */
+  --ig-radius-lg: 0.5rem;       /* 8px */
+  --ig-radius-xl: 0.75rem;      /* 12px */
+  --ig-radius-2xl: 1rem;        /* 16px */
+  --ig-radius-3xl: 1.5rem;      /* 24px */
+  --ig-radius-full: 9999px;
+
+  /* ===== Elevation (Shadows) ===== */
+
+  --ig-shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --ig-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --ig-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --ig-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --ig-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --ig-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --ig-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  --ig-shadow-none: 0 0 #0000;
+
+  /* ===== Motion & Transitions ===== */
+
+  --ig-transition-duration-fast: 150ms;
+  --ig-transition-duration-base: 250ms;
+  --ig-transition-duration-slow: 350ms;
+  --ig-transition-duration-slower: 500ms;
+
+  --ig-transition-easing-linear: linear;
+  --ig-transition-easing-ease: ease;
+  --ig-transition-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ig-transition-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ig-transition-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== Z-Index Scale ===== */
+
+  --ig-z-index-base: 0;
+  --ig-z-index-dropdown: 1000;
+  --ig-z-index-sticky: 1020;
+  --ig-z-index-fixed: 1030;
+  --ig-z-index-modal-backdrop: 1040;
+  --ig-z-index-modal: 1050;
+  --ig-z-index-popover: 1060;
+  --ig-z-index-tooltip: 1070;
+  --ig-z-index-notification: 1080;
+
+  /* ===== Border Width ===== */
+
+  --ig-border-width-0: 0;
+  --ig-border-width-1: 1px;
+  --ig-border-width-2: 2px;
+  --ig-border-width-4: 4px;
+  --ig-border-width-8: 8px;
+
+  /* ===== Opacity ===== */
+
+  --ig-opacity-0: 0;
+  --ig-opacity-5: 0.05;
+  --ig-opacity-10: 0.1;
+  --ig-opacity-20: 0.2;
+  --ig-opacity-25: 0.25;
+  --ig-opacity-30: 0.3;
+  --ig-opacity-40: 0.4;
+  --ig-opacity-50: 0.5;
+  --ig-opacity-60: 0.6;
+  --ig-opacity-70: 0.7;
+  --ig-opacity-75: 0.75;
+  --ig-opacity-80: 0.8;
+  --ig-opacity-90: 0.9;
+  --ig-opacity-95: 0.95;
+  --ig-opacity-100: 1;
+}

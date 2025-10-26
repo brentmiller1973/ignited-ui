@@ -1,0 +1,241 @@
+/**
+ * Ignited UI - Accessibility Tokens
+ *
+ * Tokens specifically designed to support WCAG 2.1 AA/AAA compliance.
+ * These ensure proper contrast, motion reduction, touch targets, and more.
+ */
+
+:root {
+  /* ===== Minimum Touch Target (WCAG 2.5.5) ===== */
+  --ig-min-touch-target: 44px;
+  --ig-min-touch-target-spacing: 8px;
+
+  /* ===== Focus Indicators (WCAG 2.4.7) ===== */
+  --ig-focus-ring-width: 2px;
+  --ig-focus-ring-color: var(--ig-color-primary);
+  --ig-focus-ring-offset: 2px;
+  --ig-focus-ring-style: solid;
+
+  /* ===== Motion Preferences ===== */
+  --ig-motion-duration: var(--ig-transition-duration-base);
+  --ig-motion-easing: var(--ig-transition-easing-ease-in-out);
+
+  /* ===== Text Sizing & Spacing (WCAG 1.4.8, 1.4.12) ===== */
+  --ig-text-min-line-height: 1.5;
+  --ig-text-paragraph-spacing: 2em;
+  --ig-text-letter-spacing-minimum: 0.12em;
+  --ig-text-word-spacing-minimum: 0.16em;
+
+  /* ===== Contrast Enhancement ===== */
+  --ig-contrast-border-width: var(--ig-border-width-1);
+  --ig-contrast-outline-width: var(--ig-border-width-2);
+
+  /* ===== Skip Link Support ===== */
+  --ig-skip-link-bg: var(--ig-color-primary);
+  --ig-skip-link-color: var(--ig-color-on-primary);
+  --ig-skip-link-offset: var(--ig-spacing-4);
+
+  /* ===== Error State Colors (ensuring proper contrast) ===== */
+  --ig-error-text: var(--ig-color-error);
+  --ig-error-background: var(--ig-color-error-container);
+  --ig-error-border: var(--ig-color-error);
+
+  /* ===== Success State Colors ===== */
+  --ig-success-text: var(--ig-color-success);
+  --ig-success-background: var(--ig-color-success-container);
+  --ig-success-border: var(--ig-color-success);
+
+  /* ===== Warning State Colors ===== */
+  --ig-warning-text: var(--ig-color-warning);
+  --ig-warning-background: var(--ig-color-warning-container);
+  --ig-warning-border: var(--ig-color-warning);
+
+  /* ===== Info State Colors ===== */
+  --ig-info-text: var(--ig-color-info);
+  --ig-info-background: var(--ig-color-info-container);
+  --ig-info-border: var(--ig-color-info);
+
+  /* ===== Keyboard Navigation Visual Cues ===== */
+  --ig-keyboard-focus-outline: 3px solid var(--ig-focus-ring-color);
+  --ig-keyboard-focus-shadow: 0 0 0 3px rgba(var(--ig-color-primary), 0.3);
+}
+
+/* ===== Reduced Motion Support (WCAG 2.3.3) ===== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ig-motion-duration: 0ms;
+    --ig-transition-duration-fast: 0ms;
+    --ig-transition-duration-base: 0ms;
+    --ig-transition-duration-slow: 0ms;
+    --ig-transition-duration-slower: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== High Contrast Mode Support ===== */
+@media (prefers-contrast: high) {
+  :root {
+    --ig-focus-ring-width: 3px;
+    --ig-focus-ring-offset: 3px;
+    --ig-contrast-border-width: var(--ig-border-width-2);
+    --ig-contrast-outline-width: var(--ig-border-width-4);
+    --ig-color-outline: var(--ig-color-on-surface);
+
+    /* Increase all shadows for better depth perception */
+    --ig-shadow-xs: 0 2px 4px 0 rgb(0 0 0 / 0.2);
+    --ig-shadow-sm: 0 2px 6px 0 rgb(0 0 0 / 0.25);
+    --ig-shadow-md: 0 6px 10px -1px rgb(0 0 0 / 0.25);
+    --ig-shadow-lg: 0 12px 20px -3px rgb(0 0 0 / 0.25);
+    --ig-shadow-xl: 0 24px 30px -5px rgb(0 0 0 / 0.25);
+    --ig-shadow-2xl: 0 30px 60px -12px rgb(0 0 0 / 0.35);
+  }
+}
+
+/* ===== Forced Colors Mode (Windows High Contrast) ===== */
+@media (forced-colors: active) {
+  :root {
+    --ig-color-primary: ButtonText;
+    --ig-color-on-primary: ButtonFace;
+    --ig-color-surface: Canvas;
+    --ig-color-on-surface: CanvasText;
+    --ig-color-outline: CanvasText;
+    --ig-focus-ring-color: Highlight;
+    --ig-color-error: MarkText;
+  }
+
+  * {
+    forced-color-adjust: auto;
+  }
+}
+
+/* ===== Dark Mode High Contrast ===== */
+@media (prefers-contrast: high) and (prefers-color-scheme: dark) {
+  [data-theme='dark'] {
+    /* Further enhance contrast in dark high-contrast mode */
+    --ig-color-primary: var(--ig-palette-primary-90);
+    --ig-color-on-surface: var(--ig-palette-neutral-99);
+    --ig-text-secondary: var(--ig-palette-neutral-variant-90);
+  }
+}
+
+/* ===== Light Mode High Contrast ===== */
+@media (prefers-contrast: high) and (prefers-color-scheme: light) {
+  :root,
+  [data-theme='light'] {
+    /* Further enhance contrast in light high-contrast mode */
+    --ig-color-primary: var(--ig-palette-primary-30);
+    --ig-color-on-surface: var(--ig-palette-neutral-0);
+    --ig-text-secondary: var(--ig-palette-neutral-variant-20);
+  }
+}
+
+/* ===== Large Text Support (WCAG 1.4.4) ===== */
+@media (min-resolution: 2dppx) {
+  :root {
+    /* Adjust for high DPI displays */
+    --ig-focus-ring-width: 1.5px;
+  }
+}
+
+/* ===== Color Blindness Safe Patterns ===== */
+.ig-pattern-dots {
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+.ig-pattern-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    currentColor 10px,
+    currentColor 11px
+  );
+}
+
+.ig-pattern-grid {
+  background-image:
+    linear-gradient(currentColor 1px, transparent 1px),
+    linear-gradient(90deg, currentColor 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* ===== Screen Reader Only Utility ===== */
+.ig-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.ig-sr-only-focusable:focus,
+.ig-sr-only-focusable:active {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* ===== Skip Link Styles ===== */
+.ig-skip-link {
+  position: absolute;
+  top: var(--ig-skip-link-offset);
+  left: var(--ig-skip-link-offset);
+  z-index: var(--ig-z-index-tooltip);
+  padding: var(--ig-spacing-3) var(--ig-spacing-6);
+  background-color: var(--ig-skip-link-bg);
+  color: var(--ig-skip-link-color);
+  text-decoration: none;
+  border-radius: var(--ig-radius-md);
+  transform: translateY(-150%);
+  transition: transform var(--ig-motion-duration) var(--ig-motion-easing);
+}
+
+.ig-skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ===== Focus Visible Polyfill Support ===== */
+[data-focus-visible-added] {
+  outline: var(--ig-focus-ring-width) var(--ig-focus-ring-style) var(--ig-focus-ring-color);
+  outline-offset: var(--ig-focus-ring-offset);
+}
+
+/* ===== Print Styles for Accessibility ===== */
+@media print {
+  :root {
+    --ig-color-primary: #000;
+    --ig-color-on-primary: #fff;
+    --ig-color-background: #fff;
+    --ig-color-on-background: #000;
+    --ig-shadow-xs: none;
+    --ig-shadow-sm: none;
+    --ig-shadow-md: none;
+    --ig-shadow-lg: none;
+    --ig-shadow-xl: none;
+    --ig-shadow-2xl: none;
+  }
+
+  .ig-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+  }
+}

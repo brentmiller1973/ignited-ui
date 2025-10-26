@@ -1,0 +1,10 @@
+/**
+ * Ignited UI Complete Theme Bundle
+ * Includes: Primitives, Semantic Tokens (Light/Dark), Accessibility, Material Design 3
+ */
+
+@import './base/tokens/primitives.css';
+@import './base/tokens/semantic-light.css';
+@import './base/tokens/semantic-dark.css';
+@import './base/tokens/accessible.css';
+@import './material/material-theme.css';

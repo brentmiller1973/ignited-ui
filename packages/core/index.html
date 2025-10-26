@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ignited UI - Component Library Demo</title>
+    <link rel="stylesheet" href="/public/theme.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--ig-font-family-base, system-ui, sans-serif);
+        background-color: var(--ig-color-background, #fafafa);
+        color: var(--ig-color-on-background, #1c1b1f);
+        padding: 2rem;
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--ig-color-outline-variant, #cac4d0);
+      }
+
+      h1 {
+        font-size: var(--ig-font-size-display-small, 2.25rem);
+        font-weight: var(--ig-font-weight-normal, 400);
+        margin-bottom: 0.5rem;
+        color: var(--ig-color-primary, #6750a4);
+      }
+
+      .subtitle {
+        font-size: var(--ig-font-size-title-large, 1.375rem);
+        color: var(--ig-text-secondary, #49454f);
+      }
+
+      .section {
+        margin-bottom: 3rem;
+      }
+
+      .section-title {
+        font-size: var(--ig-font-size-headline-small, 1.5rem);
+        margin-bottom: 1.5rem;
+        font-weight: var(--ig-font-weight-medium, 500);
+      }
+
+      .demo-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .demo-item {
+        padding: 1.5rem;
+        background-color: var(--ig-color-surface, #fff);
+        border-radius: var(--ig-radius-lg, 12px);
+        box-shadow: var(--ig-shadow-xs);
+      }
+
+      .demo-label {
+        font-size: var(--ig-font-size-label-medium, 0.75rem);
+        font-weight: var(--ig-font-weight-medium, 500);
+        color: var(--ig-text-secondary, #49454f);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        z-index: 1000;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature-card {
+        padding: 1.5rem;
+        background-color: var(--ig-color-surface-container, #e6e1e5);
+        border-radius: var(--ig-radius-md, 12px);
+      }
+
+      .feature-card h3 {
+        font-size: var(--ig-font-size-title-medium, 1rem);
+        margin-bottom: 0.5rem;
+        color: var(--ig-color-on-surface, #1c1b1f);
+      }
+
+      .feature-card p {
+        font-size: var(--ig-font-size-body-medium, 0.875rem);
+        color: var(--ig-text-secondary, #49454f);
+      }
+
+      code {
+        background-color: var(--ig-color-surface-variant, #e7e0ec);
+        padding: 0.125rem 0.375rem;
+        border-radius: var(--ig-radius-xs, 4px);
+        font-family: var(--ig-font-family-mono, monospace);
+        font-size: 0.875em;
+      }
+
+      .info-box {
+        padding: 1rem 1.5rem;
+        background-color: var(--ig-color-info-container, #cde5ff);
+        color: var(--ig-color-on-info-container, #001d36);
+        border-radius: var(--ig-radius-md, 12px);
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--ig-color-info, #007cc0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="theme-toggle">
+        <ig-button id="theme-toggle-btn" variant="outlined" aria-label="Toggle dark mode">
+          Toggle Dark Mode
+        </ig-button>
+      </div>
+
+      <header>
+        <h1>🔥 Ignited UI</h1>
+        <p class="subtitle">
+          Enterprise Lit 3.0 UI Component Library with Material Design 3
+        </p>
+      </header>
+
+      <div class="info-box">
+        <strong>Design System Agnostic:</strong> Ignited UI uses generic <code>--ig-*</code> CSS
+        variables. Material Design 3 is the default theme, but you can easily create custom themes
+        by overriding the tokens.
+      </div>
+
+      <section class="section">
+        <h2 class="section-title">Button Variants</h2>
+
+        <div class="demo-grid">
+          <div class="demo-item">
+            <div class="demo-label">Filled (Primary)</div>
+            <ig-button variant="filled">Filled Button</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Outlined</div>
+            <ig-button variant="outlined">Outlined Button</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Text</div>
+            <ig-button variant="text">Text Button</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Elevated</div>
+            <ig-button variant="elevated">Elevated Button</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Tonal</div>
+            <ig-button variant="tonal">Tonal Button</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Disabled</div>
+            <ig-button variant="filled" disabled>Disabled Button</ig-button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Button Sizes</h2>
+
+        <div class="demo-grid">
+          <div class="demo-item">
+            <div class="demo-label">Small</div>
+            <ig-button size="sm">Small Button</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Medium (Default)</div>
+            <ig-button size="md">Medium Button</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Large</div>
+            <ig-button size="lg">Large Button</ig-button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Interactive States</h2>
+
+        <div class="demo-grid">
+          <div class="demo-item">
+            <div class="demo-label">Loading</div>
+            <ig-button variant="filled" loading>Loading...</ig-button>
+          </div>
+
+          <div class="demo-item">
+            <div class="demo-label">Full Width</div>
+            <ig-button variant="filled" fullwidth>Full Width Button</ig-button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Key Features</h2>
+
+        <div class="features">
+          <div class="feature-card">
+            <h3>♿ Accessibility First</h3>
+            <p>WCAG 2.1 AA compliant with proper ARIA labels, keyboard navigation, and screen reader support.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🎨 Design Agnostic</h3>
+            <p>Generic CSS variables allow easy theming. Material Design 3 is just the default.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>⚡ Framework Agnostic</h3>
+            <p>Built with Lit 3.0 web components. Works with React, Angular, Vue, Svelte, and vanilla HTML.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🌙 Dark Mode Ready</h3>
+            <p>Full support for light and dark themes with automatic system preference detection.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>📱 Touch Optimized</h3>
+            <p>Minimum 44x44px touch targets meeting WCAG standards.</p>
+          </div>
+
+          <div class="feature-card">
+            <h3>🎭 Motion Aware</h3>
+            <p>Respects prefers-reduced-motion for accessibility.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Usage Example</h2>
+        <pre style="background: var(--ig-color-surface-variant); padding: 1.5rem; border-radius: var(--ig-radius-md); overflow-x: auto;"><code>&lt;!-- Include the theme --&gt;
+&lt;link rel="stylesheet" href="@ignited-ui/themes/material.css"&gt;
+
+&lt;!-- Use the component --&gt;
+&lt;ig-button variant="filled"&gt;Click Me&lt;/ig-button&gt;
+
+&lt;!-- Listen to events --&gt;
+&lt;script&gt;
+  const button = document.querySelector('ig-button');
+  button.addEventListener('ig-click', (e) =&gt; {
+    console.log('Button clicked!', e.detail);
+  });
+&lt;/script&gt;</code></pre>
+      </section>
+    </div>
+
+    <script type="module">
+      import './src/index.ts';
+
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
+      const htmlElement = document.documentElement;
+
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      if (currentTheme === 'dark') {
+        htmlElement.setAttribute('data-theme', 'dark');
+      }
+
+      themeToggleBtn.addEventListener('ig-click', () => {
+        const isDark = htmlElement.getAttribute('data-theme') === 'dark';
+        const newTheme = isDark ? 'light' : 'dark';
+
+        if (newTheme === 'dark') {
+          htmlElement.setAttribute('data-theme', 'dark');
+        } else {
+          htmlElement.removeAttribute('data-theme');
+        }
+
+        localStorage.setItem('theme', newTheme);
+      });
+
+      console.log('✨ Ignited UI Demo Ready!');
+      console.log('Press Tab to test keyboard navigation');
+      console.log('Try toggling dark mode with the button in the top-right');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "name": "@ignited-ui/core",
+  "version": "0.0.0",
+  "description": "Framework-agnostic Lit 3.0 web components for Ignited UI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*.d.ts",
+      "default": "./dist/components/*.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "wtr",
+    "test:watch": "wtr --watch",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "dependencies": {
+    "lit": "^3.1.0"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^4.0.0",
+    "@web/test-runner": "^0.18.0",
+    "@web/test-runner-playwright": "^0.11.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "keywords": [
+    "web-components",
+    "lit",
+    "ui-components",
+    "material-design",
+    "accessible",
+    "ignited-ui"
+  ],
+  "license": "MIT"
+}
