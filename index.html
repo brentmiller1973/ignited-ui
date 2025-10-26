@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
     <title>IGNITED UI - Next Generation Interface Framework</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -396,6 +397,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
             position: relative;
+            white-space: nowrap;
         }
 
         .section-subtitle {
@@ -405,6 +407,7 @@
             letter-spacing: 0.5em;
             margin-bottom: 4rem;
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         .glass-grid {
@@ -881,7 +884,12 @@
             }
 
             .section-title {
-                font-size: 2rem;
+                font-size: clamp(1.5rem, 5vw, 2rem);
+            }
+
+            .section-subtitle {
+                font-size: clamp(0.75rem, 3vw, 1rem);
+                letter-spacing: 0.3em;
             }
 
             .feature-grid {
@@ -954,7 +962,13 @@
             }
 
             .section-title {
-                font-size: 1.75rem;
+                font-size: clamp(1.25rem, 6vw, 1.75rem);
+                white-space: nowrap;
+            }
+
+            .section-subtitle {
+                font-size: clamp(0.65rem, 2.5vw, 0.85rem);
+                letter-spacing: 0.2em;
             }
 
             .component-tag {
